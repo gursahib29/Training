@@ -8,6 +8,6 @@ import com.OodlesCrudApp.main.Topic.Topic;
 
 public interface TopicRepository extends CrudRepository<Topic,String>{
 	
-	public List<Topic> findById(String id);
+	public List<Topic> findBysubjectId(String subjectId);
 
 }

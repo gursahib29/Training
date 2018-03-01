@@ -6,9 +6,9 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 
-import com.OodlesCrudApp.main.Professor.Professor;
+
+
 import com.OodlesCrudApp.main.Subject.Subject;
 
 @Entity
@@ -19,7 +19,7 @@ public class Topic {
 	
 	@ManyToMany
 	private Set<Subject> subject=new HashSet<Subject>();
-	//private Subject subject;
+	
 	public String getId() {
 		return id;
 	}

@@ -15,12 +15,13 @@ public class TopicService  {
 
 	@Autowired
 	private TopicRepository topicRepository;
+	
 
-	public List<Topic> getAllTopics(String topicId) {   //string-topic interchange done
+	public List<Topic> getAllTopics(String subjectId) {   
 
 		List<Topic> topic = new ArrayList<>();
 		
-		 topicRepository.findById(topicId).forEach(topic::add);
+		 topicRepository.findBysubjectId(subjectId).forEach(topic::add);
 		 
 		 
 		return topic;

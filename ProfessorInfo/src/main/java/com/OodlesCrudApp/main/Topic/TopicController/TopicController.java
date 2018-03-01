@@ -16,7 +16,7 @@ import com.OodlesCrudApp.main.Subject.Subject;
 import com.OodlesCrudApp.main.Topic.Topic;
 import com.OodlesCrudApp.main.Topic.TopicService.TopicService;
 
-//import com.OodlesCrudApp.Subjects.Subjects;
+
 
 @RestController
 public class TopicController {
@@ -26,9 +26,9 @@ public class TopicController {
 	@RequestMapping("/professors/{professorId}/subjects/{subjectId}/topics")
 	public List<Topic> getAllTopics(@PathVariable String professorId, @PathVariable String subjectId) {    
 		
-		//String to topic in generics
+		
 		return topicService.getAllTopics(subjectId);
-		//return null;
+	
 	}
 	
 	@RequestMapping("/professors/{professorId}/subjects/{subjectId}/topics/{topicId}")
@@ -50,7 +50,6 @@ public class TopicController {
 	{
 		
 		
-		//topic.setSubject(new Set(new Subject(subjectId,"")));
 		HashSet h=new HashSet();
 		h.add(new Subject(subjectId,""));
 		topic.setSubject(h);
@@ -61,8 +60,8 @@ public class TopicController {
 	@RequestMapping(method=RequestMethod.DELETE,value="/topicDelete/{id}")
 	public void deleteTopic(@PathVariable String id) {
 		 topicService.deleteTopic(id);
-		
-		
+	
 	}
+	
 
 }
